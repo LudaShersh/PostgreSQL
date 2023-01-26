@@ -107,16 +107,16 @@ create table employee_salary(
 	salary_id int not null
 );
 insert into employee_salary(id, employee_id, salary_id)
-values	(1,3,7),
-		(2,1,4),
-		(3,5,9),
-		(4,8,13),
-		(5,2,4),
-		(6,10,2),
-		(7,9,10),
-		(8,4,13),
-		(9,6,4),
-		(10,7,1),
+values	(1,71,7),
+		(2,72,4),
+		(3,73,9),
+		(4,74,13),
+		(5,75,4),
+		(6,76,2),
+		(7,77,10),
+		(8,78,13),
+		(9,79,4),
+		(10,80,1),
 		(11,11,7),
 		(12,12,5),
 		(13,13,9),
@@ -150,6 +150,11 @@ values	(1,3,7),
 	
 select * from employee_salary;
 
+select * from employee_salary;
+UPDATE employee_salary
+SET employee_id = '80' 
+WHERE id = 10;
+
 create table roles(
 	id serial primary key,
 	role_name int not null unique
@@ -181,7 +186,7 @@ values	('Junior Python developer'),
 		('Senior Automation QA engineer');
 
 select * from roles;
-70,16
+
 
 create table roles_employee(
 	id serial primary key,
@@ -235,3 +240,7 @@ values	(5,11),
 		(33,13),
 		(36,6);
 select * from roles_employee
+select * from roles_employee;
+update roles_employee 
+set role_id='16'
+where id=6;
